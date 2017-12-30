@@ -1,0 +1,7 @@
+C:\Users\admin\source\repos\BaseServer\TestServer\bin\Debug\TestServer.exe.config
+C:\Users\admin\source\repos\BaseServer\TestServer\bin\Debug\TestServer.exe
+C:\Users\admin\source\repos\BaseServer\TestServer\bin\Debug\TestServer.pdb
+C:\Users\admin\source\repos\BaseServer\TestServer\obj\Debug\TestServer.csprojResolveAssemblyReference.cache
+C:\Users\admin\source\repos\BaseServer\TestServer\obj\Debug\TestServer.csproj.CoreCompileInputs.cache
+C:\Users\admin\source\repos\BaseServer\TestServer\obj\Debug\TestServer.exe
+C:\Users\admin\source\repos\BaseServer\TestServer\obj\Debug\TestServer.pdb
