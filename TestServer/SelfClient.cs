@@ -11,8 +11,7 @@ class SelfClient : BaseClient
 
     public SelfClient(Socket client, Action<BaseClient> closeCallBack) : base(client, closeCallBack)
     {
-        msgArr = new byte[2048];
-        //Console.WriteLine(msgArr.Length);
+
     }
 
 }

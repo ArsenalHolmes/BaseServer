@@ -39,6 +39,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\BaseServer\bin\Debug\BaseServer.dll</HintPath>
     </Reference>
+    <Reference Include="EncodingTool">
+      <HintPath>..\EncodingTool\bin\Debug\EncodingTool.dll</HintPath>
+    </Reference>
     <Reference Include="SerializeTool">
       <HintPath>..\SerializeTool\bin\Debug\SerializeTool.dll</HintPath>
     </Reference>

@@ -17,6 +17,7 @@ namespace SerializeTool
                 IFormatter formatter = new BinaryFormatter();
                 formatter.Binder = new UBinder();
                 MemoryStream stream = new MemoryStream(arr, 0, arr.Length);
+                stream.Position = 0;
                 object obj = formatter.Deserialize(stream);
                 T t = (T)obj;
                 return t;

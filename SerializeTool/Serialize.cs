@@ -11,6 +11,7 @@ namespace SerializeTool
         {
             BinaryFormatter bf = new BinaryFormatter();
             MemoryStream ms = new MemoryStream();
+            ms.Position = 0;
             bf.Serialize(ms, obj);
             byte[] s = ms.ToArray();
             return s;

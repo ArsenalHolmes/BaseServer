@@ -3,3 +3,6 @@ C:\Users\admin\source\repos\BaseServer\BaseServer\bin\Debug\BaseServer.pdb
 C:\Users\admin\source\repos\BaseServer\BaseServer\obj\Debug\BaseServer.csproj.CoreCompileInputs.cache
 C:\Users\admin\source\repos\BaseServer\BaseServer\obj\Debug\BaseServer.dll
 C:\Users\admin\source\repos\BaseServer\BaseServer\obj\Debug\BaseServer.pdb
+C:\Users\admin\source\repos\BaseServer\BaseServer\bin\Debug\EncodingTool.dll
+C:\Users\admin\source\repos\BaseServer\BaseServer\bin\Debug\EncodingTool.pdb
+C:\Users\admin\source\repos\BaseServer\BaseServer\obj\Debug\BaseServer.csprojResolveAssemblyReference.cache

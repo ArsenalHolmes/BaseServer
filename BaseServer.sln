@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseClient", "BaseClient\Ba
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerializeTool", "SerializeTool\SerializeTool.csproj", "{C003796C-18D6-49E7-B1D5-C6FA8618D2BD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncodingTool", "EncodingTool\EncodingTool.csproj", "{95F6BDD9-27FB-4DE5-9481-88A57DE63F2B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{C003796C-18D6-49E7-B1D5-C6FA8618D2BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C003796C-18D6-49E7-B1D5-C6FA8618D2BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C003796C-18D6-49E7-B1D5-C6FA8618D2BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95F6BDD9-27FB-4DE5-9481-88A57DE63F2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95F6BDD9-27FB-4DE5-9481-88A57DE63F2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95F6BDD9-27FB-4DE5-9481-88A57DE63F2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95F6BDD9-27FB-4DE5-9481-88A57DE63F2B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

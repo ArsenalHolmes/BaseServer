@@ -1,0 +1,5 @@
+C:\Users\admin\source\repos\BaseServer\EncodingTool\bin\Debug\EncodingTool.dll
+C:\Users\admin\source\repos\BaseServer\EncodingTool\bin\Debug\EncodingTool.pdb
+C:\Users\admin\source\repos\BaseServer\EncodingTool\obj\Debug\EncodingTool.csproj.CoreCompileInputs.cache
+C:\Users\admin\source\repos\BaseServer\EncodingTool\obj\Debug\EncodingTool.dll
+C:\Users\admin\source\repos\BaseServer\EncodingTool\obj\Debug\EncodingTool.pdb

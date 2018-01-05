@@ -4,6 +4,8 @@ using System.Text;
 using System.Threading;
 using System.Net.Sockets;
 using System.Net;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
 
 namespace BaseServer
 {
@@ -15,7 +17,6 @@ namespace BaseServer
         public virtual IClientCallBackInterface ClientClose { get { return null; } }
 
         public byte[] msgArr = new byte[4096];
-        //public  byte[] msgArr { get { return new byte[1024];} }
 
         public abstract BaseDataUnlockPack pack { get; }
 
@@ -24,6 +25,7 @@ namespace BaseServer
             this.client = client;
             this.closeCallBack = closeCallBack;
             client.BeginReceive(msgArr, 0, msgArr.Length, SocketFlags.None, AsynReceive, client);
+            //client.BeginReceive(msgList, SocketFlags.None, AsynReceive, client);
         }
 
         /// <summary>
@@ -37,7 +39,6 @@ namespace BaseServer
             try
             {
                 count = client.EndReceive(ar);
-                Console.WriteLine(count);
             }
             catch (Exception e)
             {
@@ -52,6 +53,7 @@ namespace BaseServer
             byte[] newArr = new byte[count];
             Array.Copy(msgArr, 0, newArr, 0, count);
             pack.DataUnLockPack(newArr);
+
             client.BeginReceive(msgArr, 0, msgArr.Length, SocketFlags.None, AsynReceive, client);
         }
 
@@ -63,15 +65,11 @@ namespace BaseServer
         {
             if (client == null) return false;
 
-            int len = msg.Length;
-            byte[] lenArr = BitConverter.GetBytes(len);
-            List<byte> byteSource = new List<byte>();
-            byteSource.AddRange(lenArr);
-            byteSource.AddRange(msg);
+            byte[] byteNew = EncodingTool.ToolEncoding.EncodePacket(msg);
 
             try
             {
-                client.BeginSend(byteSource.ToArray(), 0, byteSource.Count, SocketFlags.None, AsynSend, client);
+                client.BeginSend(byteNew, 0, byteNew.Length, SocketFlags.None, AsynSend, client);
             }
             catch (Exception)
             {
@@ -101,7 +99,6 @@ namespace BaseServer
         {
             try
             {
-                Console.WriteLine("断开连接");
                 if (ClientClose!=null)
                 {
                     ClientClose.ClientClose(this);

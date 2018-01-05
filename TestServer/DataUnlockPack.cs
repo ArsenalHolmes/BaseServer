@@ -5,43 +5,34 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Runtime.Serialization;
 using System.Reflection;
 using SerializeTool;
+using EncodingTool;
+using System.Collections.Generic;
 
 class DataUnlockPack : BaseDataUnlockPack
 {
+    public List<byte> msgCacheList = new List<byte>();
+
     public override void DataUnLockPack(byte[] msgArr)
     {
-        //string s = Encoding.UTF8.GetString(msgArr);
-        //Console.WriteLine(s);
+
+        msgCacheList.AddRange(msgArr);
+        ProcessMsg();
+    }
+
+    public void ProcessMsg()
+    {
+        byte[] msg = ToolEncoding.DecodePacket(ref msgCacheList);
         try
         {
-            //IFormatter formatter = new BinaryFormatter();
-            //formatter.Binder = new UBinder();
-            //MemoryStream stream = new MemoryStream(msgArr,0,msgArr.Length);
-            object obj = Deserialize.DeSerializeByByteArr<Person>(msgArr);
+            object obj = Deserialize.DeSerializeByByteArr<object>(msg);
 
-            //BinaryFormatter bf = new BinaryFormatter();
-            //stream.Close();
+            Console.WriteLine(obj);
 
-            Person p = obj as Person;
-            Console.WriteLine(p.name);
-            Console.WriteLine(p.age);
-            Console.WriteLine(p.dic[p.name]);
         }
         catch (Exception e)
         {
             Console.WriteLine(e);
         }
-
-
-
     }
 }
 
-public class UBinder : SerializationBinder
-{
-    public override Type BindToType(string assemblyName, string typeName)
-    {
-        Assembly ass = Assembly.GetExecutingAssembly();
-        return ass.GetType(typeName);
-    }
-}

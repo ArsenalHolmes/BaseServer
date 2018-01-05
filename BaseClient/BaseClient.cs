@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Net.Sockets;
 using System.Net;
+using System.Text;
+using System.IO;
 
 namespace BaseClient
 {
@@ -9,14 +11,11 @@ namespace BaseClient
     {
         protected Socket client;
         protected byte[] msgByte;
-        protected Queue<byte[]> msgQueue;
         public virtual IClientCallBack callBack { get { return null; } }
 
         public BaseClient(string ip, int port)
         {
             msgByte = new byte[1024];
-            msgQueue = new Queue<byte[]>();
-
             try
             {
                 client = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
@@ -38,8 +37,8 @@ namespace BaseClient
                 int count = client.EndReceive(ar);
                 byte[] newByte = new byte[count];
                 Array.Copy(msgByte, 0, newByte, 0, count);
-                msgQueue.Enqueue(newByte);
 
+                UnDataPack(newByte);
                 if (callBack != null)
                 {
                     callBack.ReceiveCallBack();
@@ -53,25 +52,18 @@ namespace BaseClient
             client.BeginReceive(msgByte, 0, 1024, SocketFlags.None, ReceiveAsyn, client);
         }
 
-        public virtual void Update()
-        {
-            while (msgQueue.Count > 0)
-            {
-                UnDataPack(msgQueue.Dequeue());
-            }
-        }
-
         /// <summary>
         /// 消息解析
         /// </summary>
         /// <param name="msg"></param>
         public abstract void UnDataPack(byte[] msg);
 
-        public void BeginSend(byte[] msg)
+        public virtual void BeginSend(byte[] msg)
         {
             try
             {
-                client.BeginSend(msg, 0, msg.Length, SocketFlags.None, SendAsyn, client);
+                byte[] byteArray = EncodingTool.ToolEncoding.EncodePacket(msg);
+                client.BeginSend(byteArray, 0, byteArray.Length, SocketFlags.None, SendAsyn, client);
             }
             catch (Exception)
             {

@@ -35,10 +35,6 @@ namespace BaseServer
                 t.Start();
             }
             closeCallBack = (b) => { list.Remove(b); };
-            while (true)
-            {
-
-            }
         }
 
         private void AsyncAccept(IAsyncResult ar)
