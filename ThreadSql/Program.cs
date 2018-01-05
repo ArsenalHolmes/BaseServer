@@ -6,40 +6,86 @@ using System.Threading.Tasks;
 using MySql.Data;
 using ThreadSql.Properties;
 using System.Threading;
+using System.Data;
+using System.IO;
 
 namespace ThreadSql
 {
     class Program
     {
-        static string[] strArr = { "从中兴研发主管坠亡来看，什么是程序员的不能承受之重？", "如何看待2018风暴英雄大改？", "如何评价现今LGD战队的DOTA2分部？出路在何方？", "华尔街真如电影《华尔街之狼》里那么荒淫无度么？" };
+        
         static void Main(string[] args)
         {
-            //while (true)
-            //{
-
-            //    foreach (var item in strArr)
-            //    {
-            //        Thread t = new Thread(new ParameterizedThreadStart(ThreadTest));
-            //        t.Start(item);
-            //    }
-            //    //Thread.Sleep(0.2f);
-            //}
-            string s = "999999";
-            byte[] msg = Encoding.UTF8.GetBytes(s);
-            byte[] newMsg = new byte[msg.Length];
-            Array.Copy(newMsg, 0, msg, 0, newMsg.Length);
-
-            Console.WriteLine(msg.Length);
-            Console.WriteLine(newMsg.Length);
-
-            
+            //FileStream fss = File.Create("1.xlsx");
+            //fss.Write(buf, 0, buf.Length);
+            //fss.Close();
         }
 
-        public static void ThreadTest(object st)
+        public void DataTableTest()
         {
-            Sql s = new Sql();
-            //Console.WriteLine(s.GetPswByName(st.ToString())+"       "+DateTime.Now);
-            s.InsterData("7", "e");
+
+            DataTable tblDatas = new DataTable("Datas");
+            DataColumn dc = null;
+            dc = tblDatas.Columns.Add("ID", Type.GetType("System.Int32"));
+            dc.AutoIncrement = true;//自动增加
+            dc.AutoIncrementSeed = 1;//起始为1
+            dc.AutoIncrementStep = 1;//步长为1
+            dc.AllowDBNull = false;//
+
+            dc = tblDatas.Columns.Add("Product", Type.GetType("System.String"));
+            dc = tblDatas.Columns.Add("Version", Type.GetType("System.String"));
+            dc = tblDatas.Columns.Add("Description", Type.GetType("System.String"));
+
+            DataRow newRow;
+            newRow = tblDatas.NewRow();
+            newRow["Product"] = "大话西游";
+            newRow["Version"] = "2.0";
+            newRow["Description"] = "我很喜欢";
+            tblDatas.Rows.Add(newRow);
+
+            newRow = tblDatas.NewRow();
+            newRow["Product"] = "梦幻西游";
+            newRow["Version"] = "3.0";
+            newRow["Description"] = "比大话更幼稚";
+            tblDatas.Rows.Add(newRow);
+
+            foreach (DataRow item in tblDatas.Rows)
+            {
+                foreach (var items in item.ItemArray)
+                {
+                    Console.Write(items);
+                }
+            }
+
         }
+
+        public string GetSqlString(string tableName,Dictionary<string,string> dic)
+        {
+            string b = "select * from {0} where ";
+            b = String.Format(b, tableName);
+
+            string temp = "{0}={1} and ";
+            string baseStr = "";
+            foreach (var item in dic)
+            {
+                baseStr += String.Format(temp, item.Key, item.Value);
+            }
+            baseStr = baseStr.Remove(baseStr.Length - 4);
+            string s = b + baseStr;
+            return s;
+        }
+
+        public byte[] GetByteArrByPath(string path)
+        {
+            FileInfo fileInfo = new FileInfo(path);
+            byte[] buf = new byte[fileInfo.Length];
+            FileStream fs = new FileStream(path, FileMode.Open, FileAccess.Read);
+            fs.Read(buf, 0, buf.Length);
+            fs.Close();
+            Console.WriteLine(buf.Length);
+            return buf;
+        }
+
+
     }
 }
