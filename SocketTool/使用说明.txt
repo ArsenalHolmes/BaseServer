@@ -1,0 +1,36 @@
+SerializeTool
+序列化	GetSeriaLizeByteArr	传入object	返回它的字节数组
+反序列化	传入T（CLASS）和字节数组	返回这个类型
+
+**********************************************************
+
+EncodingTool
+
+EncodePacket 传入字节数组	得到前面是长度的完整字节数组	发消息的时候用
+DecodePacket 传入缓存的字节列表	前4位是长度	得到这个长度的字节数组，LIST自动刷新，得到的数据删除	解析消息的时候用
+
+**********************************************************
+
+BaseClient
+
+UnDataPack 每次收到消息后，把字节数组传入这个方法内
+CloseEvent 断开连接时执行这个方法
+
+可选
+ConnectError	连接失败执行这个方法
+
+可选接口	IClientCallBack
+IClientCallBack：	ReceiveCallBack 接收到消息后执行这个方法
+			SendCallBack	发送消息后执行这个方法
+
+**********************************************************
+BaseServer
+
+可选 设置IP PROT 最大连接数 是否心跳检测 心跳间隔时间
+
+clientConnect 每个人连接进来后。调用这个方法
+
+
+BaseClient：BaseDataUnlockPack 写消息解析类
+
+DataUnLockPack： 写接收到本次消息字节数组的方法
