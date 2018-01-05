@@ -1,0 +1,5 @@
+C:\Users\admin\source\repos\BaseServer\SerializeTool\bin\Debug\SerializeTool.dll
+C:\Users\admin\source\repos\BaseServer\SerializeTool\bin\Debug\SerializeTool.pdb
+C:\Users\admin\source\repos\BaseServer\SerializeTool\obj\Debug\SerializeTool.csproj.CoreCompileInputs.cache
+C:\Users\admin\source\repos\BaseServer\SerializeTool\obj\Debug\SerializeTool.dll
+C:\Users\admin\source\repos\BaseServer\SerializeTool\obj\Debug\SerializeTool.pdb

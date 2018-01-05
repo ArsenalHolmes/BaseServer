@@ -1,0 +1,8 @@
+C:\Users\admin\source\repos\BaseServer\ThreadSql\bin\Debug\ThreadSql.exe.config
+C:\Users\admin\source\repos\BaseServer\ThreadSql\bin\Debug\ThreadSql.exe
+C:\Users\admin\source\repos\BaseServer\ThreadSql\bin\Debug\ThreadSql.pdb
+C:\Users\admin\source\repos\BaseServer\ThreadSql\bin\Debug\MySql.Data.dll
+C:\Users\admin\source\repos\BaseServer\ThreadSql\obj\Debug\ThreadSql.csprojResolveAssemblyReference.cache
+C:\Users\admin\source\repos\BaseServer\ThreadSql\obj\Debug\ThreadSql.csproj.CoreCompileInputs.cache
+C:\Users\admin\source\repos\BaseServer\ThreadSql\obj\Debug\ThreadSql.exe
+C:\Users\admin\source\repos\BaseServer\ThreadSql\obj\Debug\ThreadSql.pdb

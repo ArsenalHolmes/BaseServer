@@ -1,0 +1,7 @@
+C:\Users\admin\source\repos\BaseServer\ExcelTest\bin\Debug\ExcelTest.exe.config
+C:\Users\admin\source\repos\BaseServer\ExcelTest\bin\Debug\ExcelTest.exe
+C:\Users\admin\source\repos\BaseServer\ExcelTest\bin\Debug\ExcelTest.pdb
+C:\Users\admin\source\repos\BaseServer\ExcelTest\obj\Debug\ExcelTest.csprojResolveAssemblyReference.cache
+C:\Users\admin\source\repos\BaseServer\ExcelTest\obj\Debug\ExcelTest.csproj.CoreCompileInputs.cache
+C:\Users\admin\source\repos\BaseServer\ExcelTest\obj\Debug\ExcelTest.exe
+C:\Users\admin\source\repos\BaseServer\ExcelTest\obj\Debug\ExcelTest.pdb

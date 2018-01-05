@@ -1,7 +1,11 @@
 C:\Users\admin\source\repos\BaseServer\TestServer\bin\Debug\TestServer.exe.config
 C:\Users\admin\source\repos\BaseServer\TestServer\bin\Debug\TestServer.exe
 C:\Users\admin\source\repos\BaseServer\TestServer\bin\Debug\TestServer.pdb
+C:\Users\admin\source\repos\BaseServer\TestServer\bin\Debug\BaseServer.dll
 C:\Users\admin\source\repos\BaseServer\TestServer\obj\Debug\TestServer.csprojResolveAssemblyReference.cache
 C:\Users\admin\source\repos\BaseServer\TestServer\obj\Debug\TestServer.csproj.CoreCompileInputs.cache
 C:\Users\admin\source\repos\BaseServer\TestServer\obj\Debug\TestServer.exe
 C:\Users\admin\source\repos\BaseServer\TestServer\obj\Debug\TestServer.pdb
+C:\Users\admin\source\repos\BaseServer\TestServer\bin\Debug\BaseServer.pdb
+C:\Users\admin\source\repos\BaseServer\TestServer\bin\Debug\SerializeTool.dll
+C:\Users\admin\source\repos\BaseServer\TestServer\bin\Debug\SerializeTool.pdb

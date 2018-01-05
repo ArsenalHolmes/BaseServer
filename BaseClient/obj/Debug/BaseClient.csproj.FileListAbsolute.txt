@@ -1,0 +1,5 @@
+C:\Users\admin\source\repos\BaseServer\BaseClient\obj\Debug\BaseClient.csproj.CoreCompileInputs.cache
+C:\Users\admin\source\repos\BaseServer\BaseClient\bin\Debug\BaseClient.dll
+C:\Users\admin\source\repos\BaseServer\BaseClient\bin\Debug\BaseClient.pdb
+C:\Users\admin\source\repos\BaseServer\BaseClient\obj\Debug\BaseClient.dll
+C:\Users\admin\source\repos\BaseServer\BaseClient\obj\Debug\BaseClient.pdb
