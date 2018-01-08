@@ -61,7 +61,7 @@ namespace BaseServer
                 }
                 foreach (var item in list)
                 {
-                    if (!item.SendMsg(Encoding.UTF8.GetBytes("q")))
+                    if (!item.SendMsg("q"))
                     {
                         removeList.Add(item);
                     }

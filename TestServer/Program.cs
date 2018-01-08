@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 using System.Net;
 using System.Net.Sockets;
-
+using System.Text;
 
 namespace TestServer
 {
@@ -11,10 +11,12 @@ namespace TestServer
     {
         static void Main(string[] args)
         {
-            new SelfSocket();
+            SelfSocket ss = new SelfSocket();
             while (true)
             {
-
+                string str = Console.ReadLine();
+                byte[] arr = SerializeTool.Serialize.GetSeriaLizeByteArr(str);
+                ss.tempSC.SendMsg(arr);
             }
         }
     }

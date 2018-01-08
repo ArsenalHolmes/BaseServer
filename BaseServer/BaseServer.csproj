@@ -40,6 +40,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>D:\李浩\U3D插件\MySql.Data.dll</HintPath>
     </Reference>
+    <Reference Include="SerializeTool">
+      <HintPath>..\SerializeTool\bin\Debug\SerializeTool.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />

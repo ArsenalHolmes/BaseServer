@@ -12,6 +12,7 @@ namespace BaseClient
         protected Socket client;
         protected byte[] msgByte;
         public virtual IClientCallBack callBack { get { return null; } }
+        public List<byte> msgList = new List<byte>();
 
         public BaseClient(string ip, int port)
         {
@@ -56,7 +57,28 @@ namespace BaseClient
         /// 消息解析
         /// </summary>
         /// <param name="msg"></param>
-        public abstract void UnDataPack(byte[] msg);
+        public virtual void UnDataPack(byte[] msg) {
+            msgList.AddRange(msg);
+            byte[] msgArr = EncodingTool.ToolEncoding.DecodePacket(ref msgList);
+            ProcessData(msgArr);
+        }
+
+
+        public abstract void ProcessData(byte[] msg);
+
+        public virtual void BeginSend(object obj)
+        {
+            try
+            {
+                byte[] byteArray = EncodingTool.ToolEncoding.EncodePacket(SerializeTool.Serialize.GetSeriaLizeByteArr(obj));
+                BeginSend(byteArray);
+            }
+            catch (Exception)
+            {
+                CloseEvent();
+            }
+
+        }
 
         public virtual void BeginSend(byte[] msg)
         {

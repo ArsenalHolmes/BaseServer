@@ -61,6 +61,20 @@ namespace BaseServer
         /// 发送数据
         /// </summary>
         /// <param name="msg"></param>
+        public bool SendMsg(object obj)
+        {
+            if (client == null) return false;
+
+            byte[] msg = SerializeTool.Serialize.GetSeriaLizeByteArr(obj);
+
+            return SendMsg(msg);
+        }
+
+        /// <summary>
+        /// 发送字节数组
+        /// </summary>
+        /// <param name="msg"></param>
+        /// <returns></returns>
         public bool SendMsg(byte[] msg)
         {
             if (client == null) return false;

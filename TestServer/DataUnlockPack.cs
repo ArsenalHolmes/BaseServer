@@ -14,7 +14,6 @@ class DataUnlockPack : BaseDataUnlockPack
 
     public override void DataUnLockPack(byte[] msgArr)
     {
-
         msgCacheList.AddRange(msgArr);
         ProcessMsg();
     }
@@ -22,6 +21,8 @@ class DataUnlockPack : BaseDataUnlockPack
     public void ProcessMsg()
     {
         byte[] msg = ToolEncoding.DecodePacket(ref msgCacheList);
+        if (msg == null) return;
+
         try
         {
             object obj = Deserialize.DeSerializeByByteArr<object>(msg);

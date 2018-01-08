@@ -7,6 +7,13 @@ namespace BaseServer
 {
     public abstract class BaseDataUnlockPack
     {
-        public abstract void DataUnLockPack(byte[] msgArr);
+        protected List<byte> msgList = new List<byte>();
+        public virtual void DataUnLockPack(byte[] msgArr) {
+            msgList.AddRange(msgArr);
+            byte[] msg = EncodingTool.ToolEncoding.DecodePacket(ref msgList);
+            ProcessData(msg);
+        }
+
+        public abstract void ProcessData(byte[] msg);
     }
 }

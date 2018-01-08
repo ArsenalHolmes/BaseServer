@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Reflection;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
+
 
 
 namespace SerializeTool
@@ -12,11 +14,12 @@ namespace SerializeTool
     {
         public static T DeSerializeByByteArr<T>(byte[] arr) where T:class
         {
+
             try
             {
                 IFormatter formatter = new BinaryFormatter();
                 formatter.Binder = new UBinder();
-                MemoryStream stream = new MemoryStream(arr, 0, arr.Length);
+                MemoryStream stream = new MemoryStream(arr);
                 stream.Position = 0;
                 object obj = formatter.Deserialize(stream);
                 T t = (T)obj;
@@ -35,7 +38,7 @@ namespace SerializeTool
     {
         public override Type BindToType(string assemblyName, string typeName)
         {
-            Assembly ass = Assembly.GetEntryAssembly();
+            Assembly ass = Assembly.GetExecutingAssembly();//GetEntryAssembly();
             return ass.GetType(typeName);
         }
     }

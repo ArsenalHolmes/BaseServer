@@ -18,9 +18,12 @@ class SelfSocket : BaseSocket
 
     }
 
+    public SelfClient tempSC;
+
     public override BaseClient clientConnect(Socket client, Action<BaseClient> closeCallBack)
     {
-        return new SelfClient(client, closeCallBack);
+        tempSC= new SelfClient(client, closeCallBack); ;
+        return tempSC;
     }
 }
 
