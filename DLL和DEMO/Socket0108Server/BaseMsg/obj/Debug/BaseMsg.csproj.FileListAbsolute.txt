@@ -1,0 +1,5 @@
+C:\Users\admin\source\repos\Socket0108Server\BaseMsg\bin\Debug\BaseMsg.dll
+C:\Users\admin\source\repos\Socket0108Server\BaseMsg\bin\Debug\BaseMsg.pdb
+C:\Users\admin\source\repos\Socket0108Server\BaseMsg\obj\Debug\BaseMsg.csproj.CoreCompileInputs.cache
+C:\Users\admin\source\repos\Socket0108Server\BaseMsg\obj\Debug\BaseMsg.dll
+C:\Users\admin\source\repos\Socket0108Server\BaseMsg\obj\Debug\BaseMsg.pdb

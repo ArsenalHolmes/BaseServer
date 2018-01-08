@@ -1,0 +1,12 @@
+C:\Users\admin\source\repos\Socket0108Server\Socket0108Server\bin\Debug\Socket0108Server.exe.config
+C:\Users\admin\source\repos\Socket0108Server\Socket0108Server\bin\Debug\Socket0108Server.exe
+C:\Users\admin\source\repos\Socket0108Server\Socket0108Server\bin\Debug\Socket0108Server.pdb
+C:\Users\admin\source\repos\Socket0108Server\Socket0108Server\bin\Debug\BaseServer.dll
+C:\Users\admin\source\repos\Socket0108Server\Socket0108Server\bin\Debug\EncodingTool.dll
+C:\Users\admin\source\repos\Socket0108Server\Socket0108Server\bin\Debug\SerializeTool.dll
+C:\Users\admin\source\repos\Socket0108Server\Socket0108Server\obj\Debug\Socket0108Server.csprojResolveAssemblyReference.cache
+C:\Users\admin\source\repos\Socket0108Server\Socket0108Server\obj\Debug\Socket0108Server.csproj.CoreCompileInputs.cache
+C:\Users\admin\source\repos\Socket0108Server\Socket0108Server\obj\Debug\Socket0108Server.exe
+C:\Users\admin\source\repos\Socket0108Server\Socket0108Server\obj\Debug\Socket0108Server.pdb
+C:\Users\admin\source\repos\Socket0108Server\Socket0108Server\bin\Debug\BaseMsg.dll
+C:\Users\admin\source\repos\Socket0108Server\Socket0108Server\bin\Debug\BaseMsg.pdb

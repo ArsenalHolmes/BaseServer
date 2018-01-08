@@ -1,0 +1,6 @@
+C:\Users\admin\source\repos\Socket0108Server\Test\bin\Debug\Test.exe.config
+C:\Users\admin\source\repos\Socket0108Server\Test\bin\Debug\Test.exe
+C:\Users\admin\source\repos\Socket0108Server\Test\bin\Debug\Test.pdb
+C:\Users\admin\source\repos\Socket0108Server\Test\obj\Debug\Test.csproj.CoreCompileInputs.cache
+C:\Users\admin\source\repos\Socket0108Server\Test\obj\Debug\Test.exe
+C:\Users\admin\source\repos\Socket0108Server\Test\obj\Debug\Test.pdb
